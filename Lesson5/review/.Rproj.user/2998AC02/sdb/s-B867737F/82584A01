@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Team Hadochi\n# 13-1-2017\n# Main script of the exercise of lesson 5\n\n\n# perform pre_processing\nsource('R/download&extract_data.R', echo = TRUE)\nsource('R/ndvi_change_pre_proc.R', echo = TRUE)\nsource('R/ndvi_change_proc.R', echo = TRUE)\n\n# make ndvi layers for both stacks\nndviL2014 <- make_ndvi(LC8CloudFree, 5, 4)\nndvi1990 <- make_ndvi(LT5CloudFree, 4, 3)\n\n# plot ndvi layers\nplot(ndviL2014, ylab = 'Latitude N (Deg, Deg, Min, Min, Sec, Sec)', xlab = 'Longitude E (Deg, Deg, Min, Min, Sec, Sec)', main='NDVI 2014 around Wageningen')\nplot(ndvi1990, ylab = 'Latitude N (Deg, Deg, Min, Min, Sec, Sec)', xlab = 'Longitude E (Deg, Deg, Min, Min, Sec, Sec)', main='NDVI 1990 around Wageningen')\n\n# make ndvi difference layer\nndvi_difference <- make_ndvi_dif(ndviL2014, ndvi1990)\n\n# plot ndvi difference\nplot(ndvi_difference, ylab = 'Latitude N (Deg, Deg, Min, Min, Sec, Sec)', xlab = 'Longitude E (Deg, Deg, Min, Min, Sec, Sec)', main='NDVI difference between 2014 and 1990 around Wageningen')\n\n",
+    "created" : 1484556236844.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "870016086",
+    "id" : "82584A01",
+    "lastKnownWriteTime" : 1484556750,
+    "last_content_update" : 1484556750,
+    "path" : "~/userdata/Lesson5/review/main.R",
+    "project_path" : "main.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
