@@ -1,0 +1,9 @@
+plot(band4 ~ band3, data = val_crop, pch = ".", col = "orange", xlim = c(0, 0.2), ylim = c(0, 0.5))
+points(band4 ~ band3, data = val_forest, pch = ".", col = "dark green")
+points(band4 ~ band3, data = val_wetland, pch = ".", col = "light blue")
+legend("topright", legend=c("cropland", "forest", "wetland"), fill=c("orange", "dark green", "light blue"), bg="white")
+
+get an empty plot -> have no clue why??
+
+
+another question: how to remove the layer vcf with the random.Forest object?
