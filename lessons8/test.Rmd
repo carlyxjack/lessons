@@ -1,0 +1,62 @@
+---
+title: "test"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```
+library(raster)
+load("data/GewataB2.rda")
+load("data/GewataB3.rda")
+load("data/GewataB4.rda")
+
+cellStats(GewataB2,stat=max)
+
+cellStats(GewataB2,stat=mean)
+
+max(c(maxValue(GewataB2),maxValue(GewataB3),maxValue(GewataB4)))
+
+
+gewata<-brick(GewataB2,GewataB3,GewataB4)
+hist(gewata)
+library(graphics)
+par(mfrow=c(1,1)) 
+hist(gewata,xlim=c(0,5000),ylim=c(0,750000),breaks=seq(0,5000,by=100))
+pairs(gewata) 
+
+
+ndvi <- overlay(GewataB4, GewataB3, fun=function(x,y){(x-y)/(x+y)})
+
+load("data/vcfGewata.rda")
+vcfGewata
+vcfGewata[vcfGewata>100]<-NA
+summary(vcfGewata)
+hist(vcfGewata)
+gewata <- calc(gewata, fun=function(x) x / 10000)
+covs <- addLayer(gewata, ndvi, vcfGewata)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+
+```{r}
+
+
+```
+
+```{r ndvi, echo=FALSE}
+plot(ndvi)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -1,0 +1,9 @@
+ What does this mean ___ ___ around words: e.g: ___doc___?
+these words are reserved for python methods
+Question: What is the difference between 10 and 10.0 when dealing with datatypes in Python???
+10 is an integer,while 10.0 is a float
+uestion?: What are the major differences between Append/Extend? Question: What building is campus[-2]?
+with append the variables is added to the end of the list, while with extend you can choose a position to add it. -2 is Vitae
+Why is import math the best way to import modules? all functions are included inside this module
+Question: What is the difference between os and os.path?
+Question: What does r and w mean? r: read w: write

@@ -1,0 +1,5 @@
+Question 1: Given what we know about the location of these bands along the EM spectrum, how could these scatterplots be explained?
+ band 2 and 3 water,vegetation not distingguishable, while band 2,3 and 4 are distinguishable
+Question 2: Since the VCF layer included NAs (which have also been excluded in our results) and scores relatively low according to the mean accuracy decrease criterion, try to construct an alternate Random Forest model as above, but excluding this layer. What effect does this have on the overall accuracy of the results (hint: compare the confusion matrices of the original and new outputs). What effect does leaving this variable out have on the processing time (hint: use system.time())?
+tip: save running time in a variable
+Q4:
