@@ -1,0 +1,7 @@
+Question 1: On the previous example where WKT is printed out, in which coordinate system is the WKT represented?
+Amersfoort / RD New: EPSG Projection
+
+open terminal -> sudo apt-get install ipython-notebook -> ipyhon notebook
+ssh -NL 8888:localhost:8888 ubuntu@145.100
+
+package in terminal to download basemap :sudo apt-get install python-mpltoolkits.basemap
