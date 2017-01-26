@@ -1,0 +1,11 @@
+what is the meaning of 'q' and what does 'count' mean?
+q:query , how many tweets finding the word "Amsterdam", in this case 1.
+what datastructure is search-results? -> dictionary
+why do we code like: search_results['statuses']? because search results is like a dictionary, and we want the value of the key
+what datastructure is result? also a dictionary
+
+Questions:
+
+have a look at the place object at https://dev.twitter.com/overview/api/tweets. What does Nullable mean?
+what is the meaning of if tweet['place'] != None: and why do we need to code it like this?
+if there is not value for the key 'place', then a value is assigned to the key 'place', this way is done, because
